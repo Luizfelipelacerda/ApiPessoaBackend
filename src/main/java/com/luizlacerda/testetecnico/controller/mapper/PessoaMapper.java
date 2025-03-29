@@ -12,7 +12,7 @@ import java.util.List;
 public class PessoaMapper {
 
     public PessoaRetornoDTO toDTO(Pessoa pessoa){
-        return new PessoaRetornoDTO(pessoa.getNome(), pessoa.getSobreNome(), pessoa.getCpf(), pessoa.getEmail(), pessoa.getTelefone(), pessoa.getDataDeNascimento());
+        return new PessoaRetornoDTO(pessoa.getPessoaId(), pessoa.getNome(), pessoa.getSobreNome(), pessoa.getCpf(), pessoa.getEmail(), pessoa.getTelefone(), pessoa.getDataDeNascimento());
     }
 
     public List<PessoaRetornoDTO> toDTO(List<Pessoa> pessoas){
@@ -21,7 +21,7 @@ public class PessoaMapper {
 
     public Page<PessoaRetornoDTO> toDTO(Page<Pessoa> pessoas){
         return pessoas.map( p ->
-                new PessoaRetornoDTO(p.getNome(), p.getSobreNome(), p.getCpf(), p.getEmail(),p.getTelefone(),p.getDataDeNascimento())
+                new PessoaRetornoDTO(p.getPessoaId(),p.getNome(), p.getSobreNome(), p.getCpf(), p.getEmail(),p.getTelefone(),p.getDataDeNascimento())
         );
     }
 

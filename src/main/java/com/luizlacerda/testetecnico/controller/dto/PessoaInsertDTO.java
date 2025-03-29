@@ -8,7 +8,7 @@ import java.util.Date;
 public record PessoaInsertDTO(
 
         @NotBlank(message = "O Nome não pode estar vazio")
-        @Size(min = 5, max = 20, message = "O nome deve ter entre 5 e 20 caracteres")
+        @Size(min = 3, max = 20, message = "O nome deve ter entre 3 e 20 caracteres")
         String nome,
 
         @NotBlank(message = "O Sobrenome não pode estar vazio")

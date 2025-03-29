@@ -58,6 +58,7 @@ public class PessoaBaseTest {
                 LocalDate.of(2000,10,10));
 
         pessoaUpdateReturnDTO = new PessoaRetornoDTO(
+                uuid,
                 "alterado",
                 "alterado",
                 "111.222.333-44",
@@ -66,6 +67,7 @@ public class PessoaBaseTest {
                 LocalDate.of(2000,10,10));
 
         pessoaRetornoDTO = new PessoaRetornoDTO(
+                uuid,
                 "luiz felipe",
                 "lacerda",
                 "111.222.333-44",
